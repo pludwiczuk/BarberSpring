@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "da1eef02-00df-43ed-b96a-54fadb61bb23",
+		"name": "Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjQ5NywiaWF0IjoxNjI0OTE1Njk3fQ.V3BRBydDZTpxj6z1hyHz1v8ZvEMXraxvFOMwXjjS0T9e3wMc7k_fDtyA1b-C1BtDdDLyfjICGk3Pxxr2qmU04w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"First Service\",\r\n    \"description\": \"First Service description\",\r\n    \"price\": 5000,\r\n    \"duration\": 30,\r\n    \"locationId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/services",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all by location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJid2F5bmUiLCJpc0J1c2luZXNzVXNlciI6dHJ1ZSwiZXhwIjoxNjI0NTcyNTU2LCJpYXQiOjE2MjQ1NjE3NTZ9.neagrrvIK15Bggu0KHyiY0iQFKmgk6i8KTWFVTzXww_OmoA3KCRbSokDNsLy1PWyZ49F48gt8fmV3bO_lO9lIA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/locations/1/services",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"1",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNzI1MiwiaWF0IjoxNjI0OTE2NDUyfQ.7cX4_WQbFetkRa1UB2ljsGyD2-e7smei8YkmaFcjnYO10Cr4Kt9U1xbY4p_Ey2nv-jtMcKjjHYOz8nCCOyGdGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/services/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"services",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Zmieniona nazwa\",\n    \"description\": \"Zmieniony opis\",\n    \"price\": 10000,\n    \"duration\": 60,\n    \"locationId\": 22\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/services/31",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"services",
+						"31"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

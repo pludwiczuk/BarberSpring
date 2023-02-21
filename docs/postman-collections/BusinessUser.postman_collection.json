@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "46b22e31-a34a-4b06-9330-f10b75344f93",
+		"name": "BusinessUser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add user to business",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyMTUxMDUwOCwiaWF0IjoxNjIxNDk5NzA4fQ.LhWOUbkrA3ND5_5by09YhpfIysL98YOQx76iz2GNt7RtddxDwzngaTy7AleGuoe10TyjkrP3ZXSgMpvdEytViQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"businessId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/business-users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"business-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all business users by business ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyMiIsImlzQnVzaW5lc3NVc2VyIjp0cnVlLCJleHAiOjE2MjA4NTk1MjcsImlhdCI6MTYyMDg0ODcyN30.bKWykONxNS3w8U6YGQ5GcoesIcE04CuCofF6sIGNGwrbcZOyhf7OUntpCH-WoB1IYUPlM1aeOrs4EMcKbh8ITA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/businesses/1/business-users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"businesses",
+						"1",
+						"business-users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "44453585-5724-4393-ba16-d6d5c92341c4",
+		"name": "Timetable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Update timetable",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyMzA4NzE2MCwiaWF0IjoxNjIzMDc2MzYwfQ.FQlOBBEQb04Z1cdQbMIibvagsazoHf8mc0I9X1V14NLtsgnA1WZq8YltPWbjDa5kidzg16wt9k8cdBl4jwaidw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"locationId\": 1,\n    \"dayOfWeek\": \"monday\",\n    \"openAt\": \"10:00\",\n    \"closeAt\": \"12:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/locations/1/timetable",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"1",
+						"timetable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get location timetable",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/locations/1/timetable",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"1",
+						"timetable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get possible hours for location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzc1VzZXIiLCJpc0J1c2luZXNzVXNlciI6dHJ1ZSwiZXhwIjoxNjI0OTA1OTMxLCJpYXQiOjE2MjQ4OTUxMzF9.CmbLHyZPBgvZNYzITlcuhfXfGRmfTxTJ7OiMV129ORieIU1UxbfMmu-VwrlkSghBiNfCLavLtHFN6lPmd6IXpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/locations/4/possiblehours/2021-06-30",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"4",
+						"possiblehours",
+						"2021-06-30"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

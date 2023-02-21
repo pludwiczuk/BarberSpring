@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "b1485967-2804-465e-b736-fbcde73e9ebb",
+		"name": "Business",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create business",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjQ5NywiaWF0IjoxNjI0OTE1Njk3fQ.V3BRBydDZTpxj6z1hyHz1v8ZvEMXraxvFOMwXjjS0T9e3wMc7k_fDtyA1b-C1BtDdDLyfjICGk3Pxxr2qmU04w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"First Business\",\r\n    \"address\": {\r\n        \"line1\": \"ul. Cicha 15\",\r\n        \"line2\": null,\r\n        \"postCode\": \"00-000\",\r\n        \"city\": \"Warszawa\",\r\n        \"country\": \"Poland\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/businesses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"businesses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Business",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjY1MywiaWF0IjoxNjI0OTE1ODUzfQ.2HVSMc34pyMibqcCYCH8Q_J_xE1FybKIrQGtWPMJe_YOhwZS_7LFUu6Qq-3eATzKHJnK64hFyLbNR5HHq-cyIw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/businesses/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"businesses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Business",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjY1MywiaWF0IjoxNjI0OTE1ODUzfQ.2HVSMc34pyMibqcCYCH8Q_J_xE1FybKIrQGtWPMJe_YOhwZS_7LFUu6Qq-3eATzKHJnK64hFyLbNR5HHq-cyIw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/businesses/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"businesses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Business",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Stark Industries test\",\n    \"address\": {\n        \"line1\": \"l12\",\n        \"line2\": \"l22\",\n        \"postCode\": \"00-123\",\n        \"city\": \"Los Angeles\",\n        \"country\": \"USA\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/businesses/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"businesses",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

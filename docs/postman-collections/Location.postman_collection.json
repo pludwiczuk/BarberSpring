@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "7a4c7477-a133-4673-95a1-7564fda901c8",
+		"name": "Location",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjQ5NywiaWF0IjoxNjI0OTE1Njk3fQ.V3BRBydDZTpxj6z1hyHz1v8ZvEMXraxvFOMwXjjS0T9e3wMc7k_fDtyA1b-C1BtDdDLyfjICGk3Pxxr2qmU04w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Location\",\r\n    \"businessId\": 1,\r\n    \"address\": {\r\n        \"line1\": \"ul. Cicha 15\",\r\n        \"line2\": null,\r\n        \"postCode\": \"00-000\",\r\n        \"city\": \"Warszawa\",\r\n        \"country\": \"Poland\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/locations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaXNVc2VyIjp0cnVlLCJleHAiOjE2MjA0NjM3MTUsImlhdCI6MTYyMDQ2MzcwNH0.1iZhi6ZS1iuDmX3O04vBLnebp8UzrHjAvzrJGVeAtuIn2_Thu5WL0Nm-zsxaOWQbnQenahNTO9vm33ZZCt5unQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/locations/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all locations",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/locations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Warszawa",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all business locations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyMTY4MTM1NCwiaWF0IjoxNjIxNjcwNTU0fQ.oQIeA6t73OcwthyatESGgC4-Kwnf28rj9eDi__NnxbcjtkIgvx2Fxtu21vR9oNxD7eBX_PvRMi1xe5DQ1G0y-Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/businesses/2/locations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"businesses",
+						"2",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjk4NSwiaWF0IjoxNjI0OTE2MTg1fQ.1mhNSprVKrpCRKn03rd4lUuaqwJHsTs5xmIfAxKJYCZVqfKaTdrVbnyLcCaMB5aJBJALO_USSsnAdKV74bkruA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/locations/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJid2F5bmUiLCJpc0J1c2luZXNzVXNlciI6dHJ1ZSwiZXhwIjoxNjIzODA3NTU5LCJpYXQiOjE2MjM3OTY3NTl9.bzL-738kvC5bV6G93q_jfxUfb3WQtd-8f1ilOW6HbZHc4LMI5dbnivFV3eruvtKGjlGb6mYs4bYIjWcG3I_VFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Location\",\n    \"businessId\": 1,\n    \"address\": {\n        \"line1\": \"ul. Cicha 15\",\n        \"line2\": null,\n        \"postCode\": \"00-000\",\n        \"city\": \"Warszawa\",\n        \"country\": \"Poland\"\n    }\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/locations/22",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"locations",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all BusinessUser Locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/business-users/1/locations",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"business-users",
+						"1",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

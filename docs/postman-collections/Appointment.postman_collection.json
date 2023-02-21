@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "44ff2382-3f77-4b2a-a484-059cd498bb3a",
+		"name": "Appointment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create appointmnet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaXNVc2VyIjp0cnVlLCJleHAiOjE2MjQ5MjYzMzIsImlhdCI6MTYyNDkxNTUzMn0.emslUFVuIunLkSe65-boZk95v8JuAkHFYG-7dMjAl2DatVs3Sl5vemvtzarc1X74VWqpMxyZnHnzen1OU1kh1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serviceId\": 1,\n    \"date\": \"2021-06-02T16:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete appointment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaXNVc2VyIjp0cnVlLCJleHAiOjE2MjQ5MjYzMzIsImlhdCI6MTYyNDkxNTUzMn0.emslUFVuIunLkSe65-boZk95v8JuAkHFYG-7dMjAl2DatVs3Sl5vemvtzarc1X74VWqpMxyZnHnzen1OU1kh1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/appointments/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appointments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get appointments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/appointments",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get appointment by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDkyNjI5NiwiaWF0IjoxNjI0OTE1NDk2fQ.r74M6IowIWELZ_DbkBumsIC6ok-MZUpTEadXmFmlQhQtqvYrGoROqmm4hRo7z1PEX73eZf0u48uiwKYzuZaxFg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/appointments/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appointments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update appointment",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get upcoming appointments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaXNVc2VyIjp0cnVlLCJleHAiOjE2MjQ5MjY2NjYsImlhdCI6MTYyNDkxNTg2Nn0.QvyO2vfjKL_COnYzkWQV1Y0zep0jyaBdC3rQgLTfVbiP8c7FPsosm8miQsci8pvw2JH6--SyfI5jTVwo_Wi-rw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/appointments/upcoming",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appointments",
+						"upcoming"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

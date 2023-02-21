@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "dcb77cc1-d2ad-4148-9366-963a2d4ed028",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"First\",\n    \"lastName\": \"User\",\n    \"username\": \"user\",\n    \"password\": \"password\",\n    \"email\": \"user@gmail.com\",\n    \"role\": \"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register business user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Elon\",\n    \"lastName\": \"Musk\",\n    \"username\": \"business-user\",\n    \"password\": \"password\",\n    \"email\": \"businessUser@gmail.com\",\n    \"role\": \"businessUser\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyNDU3MTk5OCwiaWF0IjoxNjI0NTYxMTk4fQ.Ozc08APlleY5o2NqfrewFBYLb41EQ48DOoxFOimlgDto74rhEbTYRur_F7YKHcXuj61gKJqkPlKzjknxQPjX1A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJidXNpbmVzcy11c2VyIiwiaXNCdXNpbmVzc1VzZXIiOnRydWUsImV4cCI6MTYyMTU0MDIwNywiaWF0IjoxNjIxNTI5NDA3fQ.6Cw3Y4TmbDQ2hyCEfh7j_5ynj67lMOVmFZ-Aas0tFWmSSrtmTWJWNe4nIfqb2JITtkAPqNsMXGmtJkERquVnpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Bill\",\n    \"lastName\": \"Gates\",\n    \"username\": \"new-username\",\n    \"password\": \"new-password\",\n    \"some-field\": \"ignored\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
