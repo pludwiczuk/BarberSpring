@@ -40,5 +40,5 @@ Wszystkie konta utworzone przy pomocy tego skryptu mają hasło `password`.
 ### Backend ###
 3. Przed pierwszym uruchomieniem ustawić `spring.jpa.hibernate.ddl-auto=create` w pliku `application.properties`.
 4. W folderze głównym projektu: `mvn spring-boot:run`
-5. Dostępne w przeglądarce:
+5. Lista dostępnych API udostępniona jest w przeglądarce:
     * Narzędzie Swagger: http://localhost:8080/api/swagger-ui/
